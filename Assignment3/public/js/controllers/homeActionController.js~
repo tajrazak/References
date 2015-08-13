@@ -1,0 +1,34 @@
+app.controller('homeActionCtrl', function ($scope, $http, $location, $rootScope) {
+
+   
+    $scope.post = {};
+    
+      $http.post('/getPostContent').success(function(data) {
+
+            $rootScope.postData=data;
+            console.log($rootScope.postData=data);
+            $scope.post = {};
+        })
+    
+    
+    
+
+    $http.get('/checkForSession').success(function (data) {
+        if (!data)
+            $location.path("/");
+    })
+
+    //saving the post in the database..............................
+
+    $scope.addPost = function () {
+
+        $http.post('/postContent', $scope.post).success(function(data) {
+
+            $rootScope.postData=data;
+            console.log("successfully your post saved");
+            $scope.post = {};
+        })
+
+    }
+
+})

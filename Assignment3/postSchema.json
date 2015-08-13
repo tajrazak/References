@@ -1,0 +1,15 @@
+[
+    {
+        user_ref_id: String,
+        content: String,
+        comments: [{
+            username: String,
+            comment: String
+        }],
+        likes: [{
+            username: String
+        }]
+
+    }
+
+]

@@ -1,0 +1,33 @@
+var postSchema = require('../model/postschema.js'),
+    dbConnection = require('../config/mongoconnect.js');
+
+var savePost = function (request, response,next) {
+
+    //console.log(request.body.post_id);
+
+
+    dbConnection.connect()
+
+    var InsertData = new postSchema({
+
+        user_id: request.session.userid,
+        post_profilename:request.session.profilename,
+        content: request.body.content
+    })
+
+    InsertData.save(function (err, data) {
+        if (err) {
+            dbConnection.close();
+            console.log(err)
+            response.send(false);
+        } else {
+
+            dbConnection.close();
+            next();
+        }
+    })
+
+
+}
+
+module.exports = savePost;

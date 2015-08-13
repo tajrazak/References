@@ -1,0 +1,28 @@
+var postschema=require('../model/postschema.js'),
+    dbConnection=require('../config/mongoconnect.js');
+    
+    
+var getPostContent=function(req,res){
+
+    dbConnection.connect();
+    
+    postschema.find(function(err,data){
+      
+      if(err)
+      {
+        console.log(err);
+        dbConnection.close();
+        res.send();
+      }else
+      {
+        console.log(data);
+        dbConnection.close();
+        //req.session.postid=data[data.length-1]._id;
+        //console.log(data[data.length-1]._id);
+        res.send(data);
+      }
+    })
+
+}
+
+module.exports=getPostContent;

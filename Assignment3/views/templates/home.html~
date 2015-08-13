@@ -1,0 +1,40 @@
+<div class="container-fluid" ng-controller="homeActionCtrl">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8" id="maindiv">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+					Whatsupppp
+					</h3>
+                </div>
+                <form name="status" novalidate>
+                    <div class="panel-body">
+                        <textarea class="form-control" name="content" rows="5" cols="15" placeholder="write your post......" ng-model="post.content" required></textarea>
+                        <br>
+                        <ul class='nav nav-pills pull-right'>
+                            <li>
+                                <button class="btn btn-primary btn-sm" type="button" ng-disabled="status.content.$error.required" ng-click="addPost()">
+                                    <em class=""></em> Post
+                                </button>
+                            </li>
+                            <li>
+                                <button class="btn btn-danger btn-sm" type="button">
+                                    <em class=""></em> Cancel
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+
+            <mydir></mydir>
+
+        </div>
+        
+        
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>

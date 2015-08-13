@@ -1,0 +1,22 @@
+var dbConnection = require('../config/mongoconnect.js'),
+    userschema = require('../model/userschema.js');
+var findUserData = function (request, response) {
+
+    dbConnection.connect();
+    userschema.findOne({
+        username: request.body.loginUsername,
+        password: request.body.loginPassword
+    }, function (err, data) {
+        if (data) {
+            console.log(data)
+            request.session.userid = data._id;
+            request.session.profilename = data.profilename;
+            response.send(true);
+        } else {
+            response.send(false)
+        }
+        dbConnection.close();
+    })
+};
+
+module.exports = findUserData;

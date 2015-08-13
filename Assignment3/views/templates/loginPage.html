@@ -1,0 +1,36 @@
+<div class="container widthSize colorset" ng-controller="loginCtrl">
+    <br>
+    <center><span id="errorMessage" ng-show="tab">Please try again....</span>
+    </center>
+    <center>
+        <h2><font>Login Form</font></h2>
+    </center>
+    <br>
+    <form class="form-horizontal" name="loginForm" ng-submit="checkValidation()" novalidate>
+        <div class="form-group ">
+            <label class="control-label col-xs-3">Email:</label>
+            <div class="col-xs-9">
+                <input type="email" name="loginEmail" ng-model="formdata.loginEmail" class="form-control" placeholder="Enter E-mailID" required /><span ng-show="loginForm.loginEmail.$dirty && loginForm.loginEmail.$error.required">required</span>
+                <span class="error" ng-show="loginForm.loginEmail.$error.email">invalid email</span>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3">Password:</label>
+            <div class="col-xs-9">
+
+                <input type="password" name="loginPassword" ng-model="formdata.loginPassword" class="form-control" placeholder="Enter Password" required/><span ng-show="loginForm.loginPassword.$dirty && loginForm.loginPassword.$error.required ">required</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <input type="submit" value="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid" />
+
+            </div>
+        </div>
+
+    </form>
+
+</div>

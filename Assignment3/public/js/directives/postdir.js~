@@ -1,0 +1,51 @@
+app.directive('mydir', function ($rootScope) {
+
+        var status=true;
+
+    return {
+        restrict: 'E',
+        link: function (scope, elem, attr) {
+
+            console.log("directive called")
+            scope.$watch(function () {
+                if ($rootScope.postData) {
+                    
+                    //templates which are adding to the view page.............................................
+                    
+                    var posted_Data = $rootScope.postData,index=posted_Data.length-1,
+                            script = "$.post('/like',{postid:$(this).attr('value')},function(data){console.log('saved')})",
+                       commentfield = "<br><div class='input-group'><input type='text' class='form-control' placeholder='Add your comment........'><span class='input-group-btn'><button class='btn btn-info' type='button' onclick=console.log($(this).html())>comment</button></span></div><br>";
+               
+                    
+       if(status==true)
+        {
+                     
+            for(i=index;i>=0;i--)
+            {
+                    var temp = "<div class='panel panel-primary'><div class='panel-heading'><label><h4>"+posted_Data[i].post_profilename+"</h4></label></div><div class='panel-body' ><p><b>"+posted_Data[i].content+"</b></p></div><div class='panel-footer'>"+commentfield+"<a href='' target='_self'  onclick="+script+" value="+posted_Data[i]._id+" class='fa fa-thumbs-up fa-lg'></a><em>("+posted_Data[i].likes.length+")</em></div>";
+
+                    elem.append(temp);
+                    
+            }
+            
+            status=false;
+            
+         }
+            
+          else
+            
+           {
+                    var temp = "<div class='panel panel-primary'><div class='panel-heading'><h4>"+posted_Data[index].post_profilename+"</h4></div><div class='panel-body'><p><b>"+posted_Data[index].content+"</b></p></div><div class='panel-footer'>"+commentfield+"<a href='' target='_self' onclick="+script+" value="+posted_Data[index]._id+" class='fa fa-thumbs-up fa-lg'></a></div>";
+
+                    elem.prepend(temp);
+           }
+
+            $rootScope.postData="";
+            posted_Data="";
+            }
+            
+            })
+        }
+
+    }
+})

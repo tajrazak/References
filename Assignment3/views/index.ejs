@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel='stylesheet' type='text/css' href='loginPageStyle.css'>
+
+
+
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.js"></script>
+
+
+
+
+
+  <script src="angular.js"></script>
+  <script src="angular-route.js"></script>
+  <script src="routes.js"></script>
+
+  <script src="loginController.js"></script>
+  <script src="homeActionController.js"></script>
+  <script src="postDirective.js"></script>
+  <script src="addOnlinePostsService.js"></script>
+  <script src="checkPostTimeDetilService.js"></script>
+  <script src="socketService.js"></script>
+  <script src="likeAndCommentsCountCtrl.js"></script>
+  <script src="signupController.js"></script>
+  <script src="changePathController.js"></script>
+
+
+
+</head>
+
+<body ng-app="app">
+  <div ng-include="'<%=somePage%>'"></div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<div class="container form-style colorset" ng-controller="signupcontroller">
+
+    <form role="form" name="myForm" id="myform">
+
+        <h2><font color="#3399FF">Sign Up Form</font></h2>
+        <br>
+        <div class="form-group">
+            <span class="fa fa-user fa-lg"></span>
+            <input class="form-control" type="text" name="txtname" ng-maxlength="25" ng-minlength="8" ng-pattern="/[a-zA-Z0-9_-]*/g" ng-model="signupUserData.Name" placeholder="Enter User Name" required>
+            <span class="pull-right text-primary" ng-show="myForm.txtname.$dirty.required"> Name must be Entered </span>
+            <span class="pull-right text-primary" ng-show="myForm.txtname.$error.minlength"> Minimum 8 characters allowed   </span>
+            <span class="pull-right text-primary" ng-show="myForm.txtname.$error.maxlength"> Maximum 25 characters allowed         </span>
+            <span class="pull-right text-primary" ng-show="myForm.txtname.$dirty.pattern">Name should One Contain Capital letter and number atleast </span>
+            <span ng-show="errorNameDisplay"><p class = "text-info pull-right">User Name Not Entered</p></span>
+        </div>
+        <div class="form-group">
+            <span class="fa fa-key fa-lg"></span>
+            <input class="form-control" type="password" name="numpass1" ng-model="signupUserData.password1" ng-maxlength="10" ng-minlength="6" placeholder="Enter Your Password">
+            <span ng-show="myForm.numpass1.$error.minlength" class="pull-right text-primary">Minimum 6 characters allowed </span>
+            <span ng-show="myForm.numpass1.$error.maxlength" class="pull-right text-primary"> Maximum 20 characters allowed </span>
+
+        </div>
+        <span ng-show="errorDisplay"><p class = "text-info pull-right">Error in Password Feild</p></span>
+        <div class="form-group">
+            <span class="fa fa-key fa-lg"></span>
+
+            <input class="form-control" type="password" name="numpass2" ng-model="signupUserData.password2" ng-maxlength="10" ng-minlength="6" placeholder="Re - Enter Your Password">
+
+            <span ng-show="myForm.numpass2.$error.minlength" class="pull-right text-primary">Minimum 6 characters allowed </span>
+            <span ng-show="myForm.numpass2.$error.maxlength" class="pull-right text-primary"> Maximum 20 characters allowed </span>
+
+        </div>
+
+        <div class="form-group">
+
+            <span class="fa fa-envelope-o fa-lg"></span>
+            <input class="form-control" name="useremail" type="email" ng-model="signupUserData.email" placeholder="Email ID" required>
+            <span ng-show="myForm.useremail.$dirty.required" class="pull-right text-primary"> Email must be Entered </span>
+            <span ng-show="myForm.useremail.$error.email" class="pull-right text-primary">Enter proper email id </span>
+            <span ng-show="erroremailDisplay"><p class = "text-info pull-right">Email is not Entered</p></span>
+
+        </div>
+
+        <div class="form-group">
+
+
+            <input type="radio" ng-model="signupUserData.gender" value="male"> <span class="fa fa-male fa-lg"></span>&nbsp;Male&nbsp;&nbsp;
+            <input type="radio" ng-model="signupUserData.gender" value="female"> <span class="fa fa-female fa-lg"></span>&nbsp;Female
+
+            <span ng-show="errorGenderDisplay"><p class = "text-info pull-right">Gender Not Selected</p></span>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <span class="fa fa-phone fa-lg"></span>
+
+            <input class="form-control" type="text" name="txtcno" ng-model="signupUserData.ContactNumber" ng-maxlength="20" ng-minlength="6" placeholder="Contact Number">
+
+            <span ng-show="myForm.txtcno.$error.minlength" class="pull-right text-primary">Minimum 6 characters allowed </span>
+            <span ng-show="myForm.txtcno.$error.maxlength" class="pull-right text-primary"> Maximum 20 characters allowed </span>
+
+        </div>
+        <br>
+
+
+        <div class="form-group">
+            <input type="button" ng-click="signupAction()" value="submit" class="btn btn-success"> &nbsp; &nbsp; &nbsp;<a href="#/login">Signin</a>
+        </div>
+
+        <div ng-switch="displayErrorresult">
+
+            <p ng-switch-when="false" class="text text-danger">User Exists With Given Mail Id</p>
+        </div>
+    </form>
+</div>

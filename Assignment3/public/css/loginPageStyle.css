@@ -1,0 +1,62 @@
+.widthSize {
+    margin-top: 200px;
+    padding-right: 40px;
+    width: 600px;
+    height: 300px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 0 30px black;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.form-horizontal span {
+    color: red;
+}
+
+#errorMessage {
+    color: blue;
+}
+
+textarea {
+    overflow-y: scroll;
+    height: 100px;
+    resize: none;
+    font-style: italic;
+    font-weight: bold;
+    /* Remove this if you want the user to resize the textarea */
+}
+
+img {
+    height: 50px;
+    width: 50px;
+}
+
+hr {
+    height: 10px;
+}
+
+.form-style {
+    margin-top: 120px;
+    height: 600px;
+    width: 600px;
+    border: 1px solid;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 0 30px black;
+}
+
+.panel {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 0 30px black;
+}
+
+body {
+    background-image: url("bg2.jpg");
+}
+
+.colorset {
+    background-color: #FFFBFB;
+}

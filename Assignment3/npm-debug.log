@@ -1,0 +1,94 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'socketet.io',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 warn package.json Assesment@1.0.0 No description
+6 warn package.json Assesment@1.0.0 No repository field.
+7 warn package.json Assesment@1.0.0 No README data
+8 warn package.json http@0.0.0 http is also the name of a node core module.
+9 warn package.json http@0.0.0 No description
+10 warn package.json http@0.0.0 No repository field.
+11 warn package.json multipart@0.1.5 No repository field.
+12 verbose readDependencies using package.json deps
+13 verbose cache add [ 'socketet.io', null ]
+14 verbose cache add name=undefined spec="socketet.io" args=["socketet.io",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'socketet.io',
+15 verbose parsed url   path: 'socketet.io',
+15 verbose parsed url   href: 'socketet.io' }
+16 silly lockFile a2bdca1d-socketet-io socketet.io
+17 verbose lock socketet.io /home/sayyadtajuddin/.npm/a2bdca1d-socketet-io.lock
+18 silly lockFile a2bdca1d-socketet-io socketet.io
+19 silly lockFile a2bdca1d-socketet-io socketet.io
+20 verbose addNamed [ 'socketet.io', '' ]
+21 verbose addNamed [ null, '*' ]
+22 silly lockFile a84a0987-socketet-io socketet.io@
+23 verbose lock socketet.io@ /home/sayyadtajuddin/.npm/a84a0987-socketet-io.lock
+24 silly addNameRange { name: 'socketet.io', range: '*', hasData: false }
+25 verbose request where is /socketet.io
+26 verbose request registry http://registry.npmjs.org/
+27 verbose request id c8b8cd719cffd633
+28 verbose url raw /socketet.io
+29 verbose url resolving [ 'http://registry.npmjs.org/', './socketet.io' ]
+30 verbose url resolved http://registry.npmjs.org/socketet.io
+31 verbose request where is http://registry.npmjs.org/socketet.io
+32 info trying registry request attempt 1 at 11:53:51
+33 http GET http://registry.npmjs.org/socketet.io
+34 http 404 http://registry.npmjs.org/socketet.io
+35 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+35 verbose headers   'content-type': 'application/json',
+35 verbose headers   'cache-control': 'max-age=0',
+35 verbose headers   'content-length': '51',
+35 verbose headers   'accept-ranges': 'bytes',
+35 verbose headers   date: 'Thu, 23 Jul 2015 06:23:54 GMT',
+35 verbose headers   via: '1.1 varnish',
+35 verbose headers   age: '0',
+35 verbose headers   connection: 'keep-alive',
+35 verbose headers   'x-served-by': 'cache-fra1246-FRA',
+35 verbose headers   'x-cache': 'MISS',
+35 verbose headers   'x-cache-hits': '0',
+35 verbose headers   'x-timer': 'S1437632633.572081,VS0,VE691' }
+36 silly registry.get cb [ 404,
+36 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+36 silly registry.get     'content-type': 'application/json',
+36 silly registry.get     'cache-control': 'max-age=0',
+36 silly registry.get     'content-length': '51',
+36 silly registry.get     'accept-ranges': 'bytes',
+36 silly registry.get     date: 'Thu, 23 Jul 2015 06:23:54 GMT',
+36 silly registry.get     via: '1.1 varnish',
+36 silly registry.get     age: '0',
+36 silly registry.get     connection: 'keep-alive',
+36 silly registry.get     'x-served-by': 'cache-fra1246-FRA',
+36 silly registry.get     'x-cache': 'MISS',
+36 silly registry.get     'x-cache-hits': '0',
+36 silly registry.get     'x-timer': 'S1437632633.572081,VS0,VE691' } ]
+37 silly lockFile a84a0987-socketet-io socketet.io@
+38 silly lockFile a84a0987-socketet-io socketet.io@
+39 error 404 404 Not Found: socketet.io
+39 error 404
+39 error 404 'socketet.io' is not in the npm registry.
+39 error 404 You should bug the author to publish it
+39 error 404 It was specified as a dependency of 'Assesment'
+39 error 404
+39 error 404 Note that you can also install from a
+39 error 404 tarball, folder, or http url, or git url.
+40 error System Linux 3.5.0-23-generic
+41 error command "/usr/bin/node" "/usr/bin/npm" "install" "socketet.io" "--save"
+42 error cwd /home/sayyadtajuddin/Documents/Assignment3
+43 error node -v v0.10.37
+44 error npm -v 1.4.28
+45 error code E404
+46 verbose exit [ 1, true ]
